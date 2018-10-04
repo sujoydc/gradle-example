@@ -4,7 +4,7 @@ package org.sujoy.gradle.hello;
 public class Hello {
 
     public static void main(String args[]){
-        Greeter greeter = new Greeter();
+        Greeting greeter = new Greeting();
         System.out.println(greeter.sayHello());
     }
 }
