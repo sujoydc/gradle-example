@@ -1,18 +1,27 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
-apply plugin: 'java'
+
+mainClassName = 'org.sujoy.gradle.hello.Hello'
 
 group 'org.sujoy.gradle.hello'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+}
+
+jar {
+    baseName = 'gradle-example'
+    version =  '1.0-SNAPSHOT'
 }
